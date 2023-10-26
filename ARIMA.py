@@ -7,7 +7,7 @@ from statsmodels.tsa.arima.model import ARIMA
 
 def ARIMA_forecast(train: pd.DataFrame,
                    test: pd.DataFrame,
-                   months_ahead: int=1, 
+                   months_ahead, 
                    p: int=3, 
                    i: int=1, 
                    q: int=3,
