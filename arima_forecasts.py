@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error
 from statsmodels.tsa.arima.model import ARIMA
 
 
-def ARIMA_forecast(train: pd.DataFrame,
+def ARIMA_forecast_wrapper(train: pd.DataFrame,
                    test: pd.DataFrame,
                    months_ahead, 
                    p: int=3, 
@@ -17,7 +17,7 @@ def ARIMA_forecast(train: pd.DataFrame,
     model = arima_model.fit()
     forecast = model.get_forecast(steps=months_ahead)
     mean_forecast = forecast.predicted_mean
-    return mean_forecast
+    return mean_forecast, forecast, model
     
 
 def ARIMA_forecasts(data: pd.DataFrame,
