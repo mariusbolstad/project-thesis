@@ -19,3 +19,11 @@ def load_daily_baci_data():
     df.index = pd.to_datetime(df.index)
     return df
 
+
+def load_weekly_baci_data():
+    df = pd.read_csv("./data/baci_weekly.csv")
+    df.set_index('Date', inplace=True)
+    df.index = pd.to_datetime(df.index)
+    return df
+
+

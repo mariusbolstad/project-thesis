@@ -205,9 +205,9 @@ def find_arima_spec(df):
     #print("Shape of data", df.shape)
     #print(df.head())
     df["CLOSE"].plot(figsize=(12,5))
-    stationarity_tests(df)
+    #stationarity_tests(df)
     #plt.show()
-    stepwise_fit = auto_arima(df["CLOSE"], trace=True, suppress_warnings=True, n_fits=50)
+    stepwise_fit = auto_arima(df["CLOSE"].dropna(), trace=True, suppress_warnings=True, n_fits=50)
     print(stepwise_fit.summary())
     
     
