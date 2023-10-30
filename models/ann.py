@@ -5,6 +5,9 @@ from sklearn.metrics import r2_score
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import RobustScaler
+
+
 
 
 # Prepare the dataset
@@ -69,7 +72,7 @@ def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
     diff_train = train.diff().dropna()
     
     # Rescale data
-    scaler = MinMaxScaler(feature_range=(-1, 1))
+    scaler = RobustScaler()
     train_scaled = scaler.fit_transform(diff_train.values.reshape(-1, 1))
     
     X_train, y_train = create_ann_dataset(train_scaled, lookback)
@@ -81,7 +84,9 @@ def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
     r2 = r2_score(y_train, scaled_fitted_values)
     # Inverse the scaling and then inverse the differencing for fitted values
     fitted_diff_values_array = scaler.inverse_transform(scaled_fitted_values)
-    fitted_values_array = np.concatenate([train[:1].values, train[1:].values + fitted_diff_values_array.cumsum(axis=0)], axis=0)
+    t1 = train[:1 + lookback].values.reshape(-1, 1)
+    t2 = train[1 + lookback:].values.reshape(-1, 1) + fitted_diff_values_array.cumsum(axis=0)
+    fitted_values_array = np.concatenate([t1, t2], axis=0)
     fitted_df = pd.DataFrame(fitted_values_array, columns=['Fitted Values'], index=train.index)
     
     # Starting with the last 'lookback' data points from the differenced training set
@@ -102,8 +107,19 @@ def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
     # Inverse the scaling for forecasted differenced values
     forecast_diff_array = scaler.inverse_transform(np.array(scaled_forecast).reshape(-1, 1))
     # Inverse the differencing to obtain forecast in original scale
-    forecast_array = np.concatenate([train[-1:].values, train[-1:].values + forecast_diff_array.cumsum(axis=0)], axis=0)[1:]
-    
+    # Extract the last value of the train set
+
+    # Update forecast_array to start with the last value of train and add the cumulative sum of the differences
+    last_value = train.iloc[-1]  # This will give a scalar
+
+    forecast_array = last_value + forecast_diff_array.cumsum(axis=0)
+
+    # Create the DataFrame
     forecast_df = pd.DataFrame(forecast_array, columns=['Forecast'], index=test.index[:steps_ahead])
+
     
     return fitted_df, forecast_df
+
+
+
+
