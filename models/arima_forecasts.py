@@ -3,9 +3,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error
 from statsmodels.tsa.arima.model import ARIMA
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.arima.model import ARIMA
+from statsmodels.graphics.tsaplots import plot_predict
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from statsmodels.tsa.stattools import adfuller
+import pprint
+from datetime import timedelta
+from statsmodels.tsa.stattools import kpss
+from sklearn.metrics import mean_squared_error
+from pmdarima import auto_arima
+from arch.unitroot import PhillipsPerron
 
 
-def ARIMA_forecast_wrapper(train: pd.DataFrame,
+
+def ARIMA_forecast(train: pd.DataFrame,
                    test: pd.DataFrame,
                    months_ahead, 
                    p: int=3, 
@@ -15,11 +29,42 @@ def ARIMA_forecast_wrapper(train: pd.DataFrame,
 
     arima_model = ARIMA(train.dropna(), order=(p, i, q))
     model = arima_model.fit()
+    #print(model.summary())
+
+    # Extract fitted values and create a DataFrame
+    fitted_df = pd.DataFrame(model.fittedvalues, columns=['Fitted'], index=train.index)
+
     forecast = model.get_forecast(steps=months_ahead)
     mean_forecast = forecast.predicted_mean
-    return mean_forecast, forecast, model
-    
 
+    # Convert mean_forecast to a DataFrame with the index from the test DataFrame
+    forecast_df = pd.DataFrame(mean_forecast.values, columns=['Forecast'], index=test.index)
+
+    if plot:
+        # Sample plot code (can be extended or modified based on requirements)
+        #train.plot(label='Training Data')
+        #fitted_df.plot(label='Fitted Values')
+        #forecast_df.plot(label='Forecast')
+        #plt.legend()
+        #plt.show()
+        
+        # Plotting the residuals
+        plt.figure(figsize=(12, 6))
+        residuals = pd.DataFrame(model.resid)
+        residuals.plot(title="Residuals")
+        plt.legend()
+        plt.title("ARIMA Model Residuals")
+        plt.show()
+        plot_acf(residuals, lags=40)
+        plt.title('ACF of ARIMA Model Residuals')
+        plt.show()
+        
+
+    return fitted_df, forecast_df, model
+
+
+
+# not currently using
 def ARIMA_forecasts(data: pd.DataFrame,
                    months_ahead: int=1, 
                    train_ratio: float=0.8,
@@ -75,11 +120,11 @@ def ARIMA_forecasts(data: pd.DataFrame,
     for _ in range(n_forecasts):
         train = data["CLOSE"].iloc[:train_size]
         test = data["CLOSE"].iloc[train_size:train_size + months_ahead]
-        print(train.head())
+        #print(train.head())
 
         arima_model = ARIMA(train.dropna(), order=(p, i, q))
         model = arima_model.fit()
-        print(model.fittedvalues.head())
+        #print(model.fittedvalues.head())
 
         forecast = model.get_forecast(steps=months_ahead)
         mean_forecast = forecast.predicted_mean
@@ -104,3 +149,69 @@ def ARIMA_forecasts(data: pd.DataFrame,
             
 
     return forecast_wrappers
+
+def stationarity_tests(df):
+    # STATIONARITY TESTS
+
+    # augmented dickey fuller
+
+    values = df["CLOSE"]
+
+    result = adfuller(values.dropna())
+    print('p-value: ', result[1])
+
+    result = adfuller(values.diff().dropna())
+    print('p-value: ', result[1])
+
+    result = adfuller(values.diff().diff().dropna())
+    print('p-value: ', result[1])
+
+    # Phillips-Perron
+
+    pp_test = PhillipsPerron(values.dropna())
+    print(pp_test.summary())
+
+
+    pp_test = PhillipsPerron(values.diff().dropna())
+    print(pp_test.summary())
+
+    # KPSS test
+    statistic, p_value, n_lags, critical_values = kpss(values, regression='c')
+
+    print(f"KPSS Statistic: {statistic}")
+    print(f"P-value: {p_value}")
+    print(f"Num Lags: {n_lags}")
+    print("Critical Values:", critical_values)
+
+    if p_value < 0.05:
+        print("Series is not stationary")
+    else:
+        print("Series is stationary")
+
+    statistic, p_value, n_lags, critical_values = kpss(values.diff().dropna(), regression='c')
+
+    print(f"KPSS Statistic: {statistic}")
+    print(f"P-value: {p_value}")
+    print(f"Num Lags: {n_lags}")
+    print("Critical Values:", critical_values)
+
+    if p_value < 0.05:
+        print("Series is not stationary")
+    else:
+        print("Series is stationary")
+
+def find_arima_spec(df):
+    #df = pd.read_csv(filepath, index_col="Date", parse_dates=True)
+    #print("Shape of data", df.shape)
+    #print(df.head())
+    df["CLOSE"].plot(figsize=(12,5))
+    stationarity_tests(df)
+    #plt.show()
+    stepwise_fit = auto_arima(df["CLOSE"], trace=True, suppress_warnings=True, n_fits=50)
+    print(stepwise_fit.summary())
+    
+    
+    
+    
+    
+    

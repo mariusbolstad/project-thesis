@@ -12,3 +12,10 @@ def load_monthly_baci_data():
     df.index = pd.to_datetime(df.index)
     return df
 
+
+def load_daily_baci_data():
+    df = pd.read_csv("./data/all_baci.csv")
+    df.set_index('Date', inplace=True)
+    df.index = pd.to_datetime(df.index)
+    return df
+
