@@ -21,24 +21,35 @@ from arch.unitroot import PhillipsPerron
 
 def ARIMA_forecast(train: pd.DataFrame,
                    test: pd.DataFrame,
-                   months_ahead, 
+                   steps_ahead, 
                    p: int=3, 
                    i: int=1, 
                    q: int=3,
-                   plot: bool=False):
+                   plot: bool=False,
+                   exog: pd.DataFrame=None):
 
-    arima_model = ARIMA(train.dropna(), order=(p, i, q))
+    # Use the exog data corresponding to the train data
+    exog_train = None
+    if exog is not None:
+        exog_train = exog.loc[train.index]
+    
+    arima_model = ARIMA(train.dropna(), order=(p, i, q), exog=exog_train)
     model = arima_model.fit()
-    #print(model.summary())
-
+    
     # Extract fitted values and create a DataFrame
     fitted_df = pd.DataFrame(model.fittedvalues, columns=['Fitted'], index=train.index)
 
-    forecast = model.get_forecast(steps=months_ahead)
+    # Use the exog data corresponding to the test (forecast) data
+    exog_test = None
+    if exog is not None:
+        exog_test = exog.loc[test.index][:steps_ahead]
+
+    forecast = model.get_forecast(steps=steps_ahead, exog=exog_test)
     mean_forecast = forecast.predicted_mean
 
     # Convert mean_forecast to a DataFrame with the index from the test DataFrame
-    forecast_df = pd.DataFrame(mean_forecast.values, columns=['Forecast'], index=test.index)
+    forecast_df = pd.DataFrame(mean_forecast.values, columns=['Forecast'], index=test.index[:steps_ahead])
+
 
     if plot:
         # Sample plot code (can be extended or modified based on requirements)
@@ -63,10 +74,32 @@ def ARIMA_forecast(train: pd.DataFrame,
     return fitted_df, forecast_df, model
 
 
+def ARIMAX_forecast(train: pd.DataFrame,
+                   test: pd.DataFrame,
+                   steps_ahead, 
+                   p: int=3, 
+                   i: int=1, 
+                   q: int=3,
+                   plot: bool=False):
+
+    arima_model = ARIMA(train.dropna(), order=(p, i, q))
+    model = arima_model.fit()
+    #print(model.summary())
+
+    # Extract fitted values and create a DataFrame
+    fitted_df = pd.DataFrame(model.fittedvalues, columns=['Fitted'], index=train.index)
+
+    forecast = model.get_forecast(steps=steps_ahead)
+    mean_forecast = forecast.predicted_mean
+
+    # Convert mean_forecast to a DataFrame with the index from the test DataFrame
+    forecast_df = pd.DataFrame(mean_forecast.values, columns=['Forecast'], index=test.index)
+
+
 
 # not currently using
 def ARIMA_forecasts(data: pd.DataFrame,
-                   months_ahead: int=1, 
+                   steps_ahead: int=1, 
                    train_ratio: float=0.8,
                    p: int=3, 
                    i: int=1, 
@@ -87,7 +120,7 @@ def ARIMA_forecasts(data: pd.DataFrame,
 
             # Plot
             plt.figure(figsize=(15,7))
-            plt.plot(true_values.iloc[:train_size + months_ahead].index, true_values.iloc[:train_size + months_ahead].values, label='observed')
+            plt.plot(true_values.iloc[:train_size + steps_ahead].index, true_values.iloc[:train_size + steps_ahead].values, label='observed')
             plt.plot(fitted_values.index, fitted_values.values, color='green', label='fitted')
 
             # Combined forecast values including the last fitted value
@@ -119,14 +152,14 @@ def ARIMA_forecasts(data: pd.DataFrame,
     train_size = int(train_ratio * len(data))
     for _ in range(n_forecasts):
         train = data["CLOSE"].iloc[:train_size]
-        test = data["CLOSE"].iloc[train_size:train_size + months_ahead]
+        test = data["CLOSE"].iloc[train_size:train_size + steps_ahead]
         #print(train.head())
 
         arima_model = ARIMA(train.dropna(), order=(p, i, q))
         model = arima_model.fit()
         #print(model.fittedvalues.head())
 
-        forecast = model.get_forecast(steps=months_ahead)
+        forecast = model.get_forecast(steps=steps_ahead)
         mean_forecast = forecast.predicted_mean
         conf_int = forecast.conf_int()
 
@@ -142,7 +175,7 @@ def ARIMA_forecasts(data: pd.DataFrame,
         }
 
         forecast_wrappers.append(forecast_wrapper)
-        train_size += months_ahead  # Shift the training data for next forecast
+        train_size += steps_ahead  # Shift the training data for next forecast
         
         if plot:
             plot_forecast()

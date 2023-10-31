@@ -27,3 +27,8 @@ def load_weekly_baci_data():
     return df
 
 
+def load_daily_exog_data():
+    df = pd.read_csv("./data/iron_ore_futures_daily.csv")
+    df.set_index('Date', inplace=True)
+    df.index = pd.to_datetime(df.index)
+    return df

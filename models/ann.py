@@ -9,25 +9,25 @@ from sklearn.preprocessing import RobustScaler
 from keras.callbacks import EarlyStopping
 
 
-
-
-
 # Prepare the dataset
-def create_ann_dataset(data, lookback, is_test=False, ):
+def create_ann_dataset(data, lookback, is_test=False, exog=None):
     X, y = [], []
-    if is_test:  # for test data, we just need the last entry for 1-step ahead forecast
-        X.append(data[-lookback:])
-        return np.array(X).reshape(1, lookback, 1), None
+    if exog is not None:
+        exog = exog.reshape(-1, 1)
+        data = np.hstack((data, exog))
+    if is_test:
+        X.append(data[-lookback:].flatten())
+        return np.array(X), None
     else:
         for i in range(lookback, len(data)):
-            X.append(data[i-lookback:i])
-            y.append(data[i])
+            X.append(data[i-lookback:i].flatten())
+            y.append(data[i][0])
         return np.array(X), np.array(y)
 
 # Design the ANN model
-def create_ann_model(lookback, hidden_units=2):
+def create_ann_model(lookback, num_features=1, hidden_units=2):
     model = Sequential()
-    model.add(Dense(units=hidden_units, input_dim=lookback, activation='sigmoid'))
+    model.add(Dense(units=hidden_units, input_dim=lookback * num_features, activation='sigmoid'))
     model.add(Dense(1))
     model.compile(loss='mean_squared_error', optimizer='adam')
     return model
@@ -71,17 +71,29 @@ def ANN_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
     return fitted_df, forecast_df
 
 
-def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2, epochs=10):
+def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2, epochs=10, exog_train=None, exog_test=None):
     # Difference the data
     diff_train = train.diff().dropna()
     
     # Rescale data
     scaler = RobustScaler()
     train_scaled = scaler.fit_transform(diff_train.values.reshape(-1, 1))
+
+    # If exog variables are provided, scale them and concatenate
+    if exog_train is not None:
+        diff_exog_train = exog_train.diff().dropna()
+        exog_scaler = RobustScaler()
+        exog_train_scaled = exog_scaler.fit_transform(diff_exog_train.values)
+        train_data_combined = np.hstack((train_scaled, exog_train_scaled))
+        X_train, y_train = create_ann_dataset(train_scaled, lookback, exog=exog_train_scaled)
+    else:
+        train_data_combined = train_scaled
+        X_train, y_train = create_ann_dataset(train_scaled, lookback)
+
     
-    X_train, y_train = create_ann_dataset(train_scaled, lookback)
-    
-    model = create_ann_model(lookback=lookback, hidden_units=hidden_units)
+    num_features = train_data_combined.shape[1]
+
+    model = create_ann_model(lookback=lookback, hidden_units=hidden_units, num_features=num_features)
     model.fit(X_train, y_train, epochs=epochs, batch_size=1)
 
     scaled_fitted_values = model.predict(X_train)
@@ -94,19 +106,20 @@ def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2, epoc
     fitted_df = pd.DataFrame(fitted_values_array, columns=['Fitted Values'], index=train.index)
     
     # Starting with the last 'lookback' data points from the differenced training set
-    input_data = train_scaled[-lookback:]
+    input_data = train_data_combined[-lookback:]
     
     # List to store forecasted points in the differenced form
     scaled_forecast = []
 
     # Iteratively predict steps ahead
-    for _ in range(steps_ahead):
+    for _ in range(steps_ahead): # Append exog_test data if it exists
         X_test, _ = create_ann_dataset(input_data, lookback, is_test=True)
         prediction = model.predict(X_test)
         scaled_forecast.append(prediction[0][0])
+
         
-        # Append the new prediction to the end of input_data and remove the oldest value
-        input_data = np.append(input_data[1:], prediction)
+        # Update the input data for next iteration
+        input_data[-1, 0] = prediction
 
     # Inverse the scaling for forecasted differenced values
     forecast_diff_array = scaler.inverse_transform(np.array(scaled_forecast).reshape(-1, 1))
