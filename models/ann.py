@@ -6,6 +6,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import RobustScaler
+from keras.callbacks import EarlyStopping
+
 
 
 
@@ -25,7 +27,7 @@ def create_ann_dataset(data, lookback, is_test=False, ):
 # Design the ANN model
 def create_ann_model(lookback, hidden_units=2):
     model = Sequential()
-    model.add(Dense(units=hidden_units, input_dim=lookback, activation='linear'))
+    model.add(Dense(units=hidden_units, input_dim=lookback, activation='sigmoid'))
     model.add(Dense(1))
     model.compile(loss='mean_squared_error', optimizer='adam')
     return model
@@ -38,7 +40,9 @@ def ANN_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
     X_train, y_train = create_ann_dataset(train_scaled, lookback)
     
     model = create_ann_model(lookback=lookback, hidden_units=hidden_units)
-    model.fit(X_train, y_train, epochs=3, batch_size=1)
+    early_stop = EarlyStopping(monitor='loss', patience=2, verbose=1)
+
+    model.fit(X_train, y_train, epochs=3, batch_size=1, callbacks=[early_stop])
 
 
     scaled_fitted_values = model.predict(X_train)
@@ -67,7 +71,7 @@ def ANN_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
     return fitted_df, forecast_df
 
 
-def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
+def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2, epochs=10):
     # Difference the data
     diff_train = train.diff().dropna()
     
@@ -78,7 +82,7 @@ def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
     X_train, y_train = create_ann_dataset(train_scaled, lookback)
     
     model = create_ann_model(lookback=lookback, hidden_units=hidden_units)
-    model.fit(X_train, y_train, epochs=3, batch_size=1)
+    model.fit(X_train, y_train, epochs=epochs, batch_size=1)
 
     scaled_fitted_values = model.predict(X_train)
     r2 = r2_score(y_train, scaled_fitted_values)
