@@ -190,3 +190,10 @@ Random Walk RMSEs: 51.0
 ANN RMSEs: 70.00138346354167
 ANNX RMSEs: 64.21044921875
 Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.7. 1 step ahead. 10 forecasts
+ARIMA RMSEs: N/A
+ARIMAX RMSEs: N/A
+Random Walk RMSEs: 83.2
+ANN RMSEs: 90.45250244140625
+ANNX RMSEs: 93.575146484375
+Combination RMSEs: N/A
