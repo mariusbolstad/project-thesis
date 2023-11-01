@@ -35,6 +35,7 @@ def ARIMA_forecast(train: pd.DataFrame,
     
     arima_model = ARIMA(train.dropna(), order=(p, i, q), exog=exog_train)
     model = arima_model.fit()
+    print(model.summary())
     
     # Extract fitted values and create a DataFrame
     fitted_df = pd.DataFrame(model.fittedvalues, columns=['Fitted'], index=train.index)

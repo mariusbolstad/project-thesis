@@ -1,5 +1,6 @@
 from keras.models import Sequential
 from keras.layers import Dense
+from sklearn.discriminant_analysis import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import r2_score
 import numpy as np
@@ -82,7 +83,16 @@ def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2, epoc
     if exog_train is not None:
         diff_exog_train = exog_train.diff().dropna()
         exog_scaler = RobustScaler()
-        exog_train_scaled = exog_scaler.fit_transform(diff_exog_train.values)
+        # Scale the first column
+        first_col = diff_exog_train.iloc[:, 0]
+        exog_train_scaled = exog_scaler.fit_transform(first_col.values.reshape(-1, 1))
+        # If there's more than one column, loop through the remaining columns and scale them
+        if diff_exog_train.shape[1] > 1:
+            for i in range(1, diff_exog_train.shape[1]):
+                exog_scaler_1 = RobustScaler()
+                col = diff_exog_train.iloc[:, i]
+                scaled_col = exog_scaler_1.fit_transform(col.values.reshape(-1, 1))
+                exog_train_scaled = np.column_stack((exog_train_scaled, scaled_col))
         train_data_combined = np.hstack((train_scaled, exog_train_scaled))
         X_train, y_train = create_ann_dataset(train_scaled, lookback, exog=exog_train_scaled)
     else:
