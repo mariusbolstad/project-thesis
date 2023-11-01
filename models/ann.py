@@ -13,7 +13,6 @@ from keras.callbacks import EarlyStopping
 def create_ann_dataset(data, lookback, is_test=False, exog=None):
     X, y = [], []
     if exog is not None:
-        exog = exog.reshape(-1, 1)
         data = np.hstack((data, exog))
     if is_test:
         X.append(data[-lookback:].flatten())
