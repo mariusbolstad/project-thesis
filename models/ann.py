@@ -10,6 +10,7 @@ from sklearn.preprocessing import RobustScaler
 from keras.callbacks import EarlyStopping
 
 
+
 # Prepare the dataset
 def create_ann_dataset(data, lookback, is_test=False, exog=None):
     X, y = [], []
@@ -25,9 +26,9 @@ def create_ann_dataset(data, lookback, is_test=False, exog=None):
         return np.array(X), np.array(y)
 
 # Design the ANN model
-def create_ann_model(lookback, num_features=1, hidden_units=2):
+def create_ann_model(lookback, num_features=1, hidden_units=2, activation="sigmoid"):
     model = Sequential()
-    model.add(Dense(units=hidden_units, input_dim=lookback * num_features, activation='sigmoid'))
+    model.add(Dense(units=hidden_units, input_dim=lookback * num_features, activation=activation))
     model.add(Dense(1))
     model.compile(loss='mean_squared_error', optimizer='adam')
     return model
@@ -70,26 +71,49 @@ def ANN_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
     
     return fitted_df, forecast_df
 
+def create_scaler(scaler_key):
+    if scaler_key == "robust":
+        return RobustScaler()
+    elif scaler_key == "standard":
+        return StandardScaler()
+    return RobustScaler
 
-def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2, epochs=10, exog_train=None, exog_test=None):
-    # Difference the data
-    diff_train = train.diff().dropna()
-    
-    # Rescale data
-    scaler = RobustScaler()
-    train_scaled = scaler.fit_transform(diff_train.values.reshape(-1, 1))
+
+def ANN_diff_forecast(train, 
+                      test, 
+                      steps_ahead, 
+                      lookback=2, 
+                      hidden_units=2, 
+                      epochs=10, 
+                      exog_train=None, 
+                      exog_test=None,
+                      ann_diff=True,
+                      exog_diff=True,
+                      scaler="robust",
+                      activation="sigmoid"):
+    # Rescale and Difference the data
+    if ann_diff:
+        train_scaler = create_scaler(scaler_key=scaler)
+        diff_train = train.diff().dropna()
+        train_scaled = train_scaler.fit_transform(diff_train.values.reshape(-1, 1))
+    else:
+        train_scaler_2 = create_scaler(scaler_key=scaler)
+        train_scaled = train_scaler_2.fit_transform(train.values.reshape(-1, 1))
 
     # If exog variables are provided, scale them and concatenate
     if exog_train is not None:
-        diff_exog_train = exog_train.diff().dropna()
-        exog_scaler = RobustScaler()
+        if exog_diff:
+            diff_exog_train = exog_train.diff().dropna()
+        elif ann_diff and not exog_diff:
+            diff_exog_train = exog_train.iloc[1:, :]
+        exog_scaler = create_scaler(scaler_key=scaler)
         # Scale the first column
         first_col = diff_exog_train.iloc[:, 0]
         exog_train_scaled = exog_scaler.fit_transform(first_col.values.reshape(-1, 1))
         # If there's more than one column, loop through the remaining columns and scale them
         if diff_exog_train.shape[1] > 1:
             for i in range(1, diff_exog_train.shape[1]):
-                exog_scaler_1 = RobustScaler()
+                exog_scaler_1 = create_scaler(scaler_key=scaler)
                 col = diff_exog_train.iloc[:, i]
                 scaled_col = exog_scaler_1.fit_transform(col.values.reshape(-1, 1))
                 exog_train_scaled = np.column_stack((exog_train_scaled, scaled_col))
@@ -102,16 +126,21 @@ def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2, epoc
     
     num_features = train_data_combined.shape[1]
 
-    model = create_ann_model(lookback=lookback, hidden_units=hidden_units, num_features=num_features)
+    model = create_ann_model(lookback=lookback, hidden_units=hidden_units, num_features=num_features, activation=activation)
     model.fit(X_train, y_train, epochs=epochs, batch_size=1)
 
     scaled_fitted_values = model.predict(X_train)
     r2 = r2_score(y_train, scaled_fitted_values)
-    # Inverse the scaling and then inverse the differencing for fitted values
-    fitted_diff_values_array = scaler.inverse_transform(scaled_fitted_values)
-    t1 = train[:1 + lookback].values.reshape(-1, 1)
-    t2 = train[1 + lookback:].values.reshape(-1, 1) + fitted_diff_values_array.cumsum(axis=0)
-    fitted_values_array = np.concatenate([t1, t2], axis=0)
+    print("R2: " + str(r2))
+    if ann_diff:
+        # Inverse the scaling and then inverse the differencing for fitted values
+        fitted_diff_values_array = train_scaler.inverse_transform(scaled_fitted_values)
+        t1 = train[:1 + lookback].values.reshape(-1, 1)
+        t2 = train[1 + lookback:].values.reshape(-1, 1) + fitted_diff_values_array.cumsum(axis=0)
+        fitted_values_array = np.concatenate([t1, t2], axis=0)
+    else:
+        fitted_values_array = train_scaler.inverse_transform(scaled_fitted_values)
+
     fitted_df = pd.DataFrame(fitted_values_array, columns=['Fitted Values'], index=train.index)
     
     # Starting with the last 'lookback' data points from the differenced training set
@@ -131,7 +160,7 @@ def ANN_diff_forecast(train, test, steps_ahead, lookback=2, hidden_units=2, epoc
         input_data[-1, 0] = prediction
 
     # Inverse the scaling for forecasted differenced values
-    forecast_diff_array = scaler.inverse_transform(np.array(scaled_forecast).reshape(-1, 1))
+    forecast_diff_array = train_scaler.inverse_transform(np.array(scaled_forecast).reshape(-1, 1))
     # Inverse the differencing to obtain forecast in original scale
     # Extract the last value of the train set
 
