@@ -192,13 +192,13 @@ def stationarity_tests(df):
     values = df["CLOSE"]
 
     result = adfuller(values.dropna())
-    print('p-value: ', result[1])
+    print(' ADF p-value: ', result[1])
 
     result = adfuller(values.diff().dropna())
-    print('p-value: ', result[1])
+    print('ADF p-value: ', result[1])
 
     result = adfuller(values.diff().diff().dropna())
-    print('p-value: ', result[1])
+    print('ADF p-value: ', result[1])
 
     # Phillips-Perron
 
@@ -239,13 +239,12 @@ def find_arima_spec(df):
     #print("Shape of data", df.shape)
     #print(df.head())
     df["CLOSE"].plot(figsize=(12,5))
-    #stationarity_tests(df)
-    #plt.show()
+    stationarity_tests(df)
+    plt.show()
     stepwise_fit = auto_arima(df["CLOSE"].dropna(), trace=True, suppress_warnings=True, n_fits=50)
     return stepwise_fit.summary()
     
     
     
-    
-    
+
     

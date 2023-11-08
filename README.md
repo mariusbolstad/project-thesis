@@ -1,5 +1,43 @@
 # project-thesis
 
+Solstorm:
+
+Login: 
+
+```bash
+ssh solstorm-login.iot.ntnu.no -l mariumbo
+```
+
+If you need to swap file:
+
+Solstorm terminal:
+
+```bash
+rm main.py
+```
+
+Local terminal:
+```bash
+scp /Users/mariusbolstad/VSCode/project-thesis/main.py mariumbo@solstorm-login.iot.ntnu.no:~
+scp mariumbo@solstorm-login.iot.ntnu.no:/storage/users/mariumbo/log2.csv /Users/mariusbolstad/VSCode/project-thesis/data/
+```
+```bash
+scp -r /Users/mariusbolstad/VSCode/project-thesis/main.py /Users/mariusbolstad/VSCode/project-thesis/models/ /Users/mariusbolstad/VSCode/project-thesis/data/ /Users/mariusbolstad/VSCode/project-thesis/helper_functions.py  mariumbo@solstorm-login.iot.ntnu.no:~
+```
+
+Deploy program to an idle node (swap with 2-40): https://solstorm.iot.ntnu.no/ganglia/?c=Solstorm&m=load_one&r=hour&s=by%20name&hc=5&mc=2
+
+Solstorm terminal:
+
+```bash
+rm -rf main.py models/ data/ helper_functions.py requirements.txt
+screen
+screen -ls
+screen -rd <session number from screen -ls>
+ssh compute-2-40
+module load Python
+
+```
 
 
 Forecast results:
@@ -46,3 +84,13 @@ Daily BACI, 1-step ahead, 50 forecasts. ANN(1,2) 3 epochs, ARIMA(1,1,2)
 ARIMA RMSEs: 26.971779961488878
 Random Walk RMSEs: 48.64
 ANN RMSEs: 29.4990869140625
+
+
+
+Best models:
+
+ANN(2,1)
+ANN(4,3)
+ANN(4,2)
+ANN(4,5)
+ANN(1,6) (not exog diff)

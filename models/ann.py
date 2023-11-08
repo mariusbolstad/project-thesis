@@ -43,7 +43,7 @@ def ANN_forecast(train, test, steps_ahead, lookback=2, hidden_units=2):
     model = create_ann_model(lookback=lookback, hidden_units=hidden_units)
     early_stop = EarlyStopping(monitor='loss', patience=2, verbose=1)
 
-    model.fit(X_train, y_train, epochs=3, batch_size=1, callbacks=[early_stop])
+    model.fit(X_train, y_train, epochs=3, batch_size=1, callbacks=[early_stop], verbose=0)
 
 
     scaled_fitted_values = model.predict(X_train)
@@ -97,8 +97,8 @@ def ANN_diff_forecast(train,
         diff_train = train.diff().dropna()
         train_scaled = train_scaler.fit_transform(diff_train.values.reshape(-1, 1))
     else:
-        train_scaler_2 = create_scaler(scaler_key=scaler)
-        train_scaled = train_scaler_2.fit_transform(train.values.reshape(-1, 1))
+        train_scaler = create_scaler(scaler_key=scaler)
+        train_scaled = train_scaler.fit_transform(train.values.reshape(-1, 1))
 
     # If exog variables are provided, scale them and concatenate
     if exog_train is not None:
@@ -106,6 +106,8 @@ def ANN_diff_forecast(train,
             diff_exog_train = exog_train.diff().dropna()
         elif ann_diff and not exog_diff:
             diff_exog_train = exog_train.iloc[1:, :]
+        else:
+            diff_exog_train = exog_train
         exog_scaler = create_scaler(scaler_key=scaler)
         # Scale the first column
         first_col = diff_exog_train.iloc[:, 0]
@@ -139,7 +141,9 @@ def ANN_diff_forecast(train,
         t2 = train[1 + lookback:].values.reshape(-1, 1) + fitted_diff_values_array.cumsum(axis=0)
         fitted_values_array = np.concatenate([t1, t2], axis=0)
     else:
-        fitted_values_array = train_scaler.inverse_transform(scaled_fitted_values)
+        t1 = train[:lookback].values.reshape(-1, 1)
+        t2 = train_scaler.inverse_transform(scaled_fitted_values)
+        fitted_values_array = np.concatenate([t1, t2], axis=0)
 
     fitted_df = pd.DataFrame(fitted_values_array, columns=['Fitted Values'], index=train.index)
     

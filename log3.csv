@@ -1,0 +1,12 @@
+Data frequency,Train Ratio,Number of Forecasts,Steps Ahead,Resolution,ARIMA Specification,ANN Specification,Epochs,Activation Function,ANN Differences,Exogenous Differences,Scaler,Log,Plot,Plot All,Exogenous Variable,ARIMA RMSEs,ARIMAX RMSEs,Random Walk RMSEs,ANN RMSEs,ANNX RMSEs,Combination RMSEs,CombinationX RMSEs
+monthly,0.8,30,1,50,"(1, 1, 1)","(4, 2)",1,sigmoid,True,False,standard,False,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",963.14,975.0,907.17,978.55,880.96,962.61,918.0
+monthly,0.8,30,1,50,"(1, 1, 1)","(4, 2)",1,sigmoid,True,False,standard,False,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",963.14,975.0,907.17,902.56,1054.44,913.75,991.96
+monthly,0.8,30,1,50,"(1, 1, 1)","(4, 2)",1,sigmoid,True,False,standard,False,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",963.14,975.0,907.17,928.61,1103.4,939.99,1007.51
+monthly,0.8,30,1,50,"(1, 1, 1)","(4, 2)",1,sigmoid,True,False,standard,False,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",963.14,975.0,907.17,895.79,893.62,917.63,878.91
+monthly,0.8,30,1,50,"(1, 1, 1)","(4, 2)",1,sigmoid,True,False,standard,False,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",963.14,975.0,907.17,1035.46,1012.15,991.69,971.12
+monthly,0.8,30,1,50,"(1, 1, 1)","(4, 2)",20,sigmoid,True,False,standard,True,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",1.11,1.08,1.09,1.08,1.09,1.09,1.08
+monthly,0.8,30,1,50,"(1, 1, 1)","(4, 2)",20,sigmoid,True,False,standard,False,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",963.14,975.0,907.17,889.58,907.7,911.53,927.45
+weekly,0.8,30,1,50,"(3, 1, 1)","(4, 2)",20,sigmoid,True,False,standard,True,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",0.21,0.2,0.2,0.21,0.2,0.21,0.19
+daily,0.8,30,1,50,"(3, 1, 3)","(4, 2)",20,sigmoid,True,False,standard,True,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",0.05,0.05,0.06,0.04,0.04,0.04,0.04
+weekly,0.8,30,1,50,"(3, 1, 1)","(4, 2)",20,sigmoid,True,False,standard,False,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",507.16,485.54,522.5,518.14,506.85,508.47,492.36
+daily,0.8,30,1,50,"(3, 1, 3)","(4, 2)",20,sigmoid,True,False,standard,False,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",165.93,168.27,244.17,179.56,177.56,172.39,172.87

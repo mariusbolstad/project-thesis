@@ -456,3 +456,2559 @@ Random Walk RMSEs: 1453.0685996992688
 ANN RMSEs: 1001.2331691992042
 ANNX RMSEs: 1386.7677038920763
 Combination RMSEs: N/A
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: True
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 362.5341796875
+ANNX RMSEs: 413.267578125
+Combination RMSEs: 314.534158580022
+======= End of Log =======
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: True
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 406.5751953125
+ANNX RMSEs: 398.98681640625
+Combination RMSEs: 336.554666392522
+======= End of Log =======
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: True
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 402.726318359375
+ANNX RMSEs: 330.5067138671875
+Combination RMSEs: 334.6302279159595
+======= End of Log =======
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: True
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 393.204833984375
+ANNX RMSEs: 435.659423828125
+Combination RMSEs: 329.8694857284595
+======= End of Log =======
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 372.0908203125
+ANNX RMSEs: 394.427490234375
+Combination RMSEs: 319.312478892522
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 368.694091796875
+ANNX RMSEs: 356.541748046875
+Combination RMSEs: 317.6141146347095
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 381.79345703125
+ANNX RMSEs: 381.9345703125
+Combination RMSEs: 324.163797251897
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 354.4931640625
+ANNX RMSEs: 403.82861328125
+Combination RMSEs: 310.513650767522
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 389.1982421875
+ANNX RMSEs: 366.9669189453125
+Combination RMSEs: 327.866189830022
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 380.475341796875
+ANNX RMSEs: 335.8092041015625
+Combination RMSEs: 323.5047396347095
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 387.387451171875
+ANNX RMSEs: 362.52685546875
+Combination RMSEs: 326.9607943222095
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 387.24658203125
+ANNX RMSEs: 314.586181640625
+Combination RMSEs: 326.890359751897
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 386.002685546875
+ANNX RMSEs: 396.337890625
+Combination RMSEs: 326.2684115097095
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 383.28369140625
+ANNX RMSEs: 411.58447265625
+Combination RMSEs: 324.908914439397
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 387.24658203125
+ANNX RMSEs: 298.7421875
+Combination RMSEs: 326.890359751897
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 364.440185546875
+ANNX RMSEs: 390.732421875
+Combination RMSEs: 315.4871615097095
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 374.556640625
+ANNX RMSEs: 341.4326171875
+Combination RMSEs: 320.545389048772
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 405.21826171875
+ANNX RMSEs: 361.2357177734375
+Combination RMSEs: 335.876199595647
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 412.644287109375
+ANNX RMSEs: 340.001953125
+Combination RMSEs: 339.5892122909595
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 372.2076416015625
+ANNX RMSEs: 359.9599609375
+Combination RMSEs: 319.37088953705324
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 371.1571044921875
+ANNX RMSEs: 401.744140625
+Combination RMSEs: 318.84562098236574
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 374.4461669921875
+ANNX RMSEs: 396.07958984375
+Combination RMSEs: 320.49015223236574
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 373.37744140625
+ANNX RMSEs: 357.5888671875
+Combination RMSEs: 319.955789439397
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 361.4580078125
+ANNX RMSEs: 330.4384765625
+Combination RMSEs: 313.996072642522
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 355.12060546875
+ANNX RMSEs: 354.7943115234375
+Combination RMSEs: 310.827371470647
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 386.28857421875
+ANNX RMSEs: 422.700927734375
+Combination RMSEs: 326.411355845647
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 419.029052734375
+ANNX RMSEs: 390.9853515625
+Combination RMSEs: 342.7815951034595
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 377.0899658203125
+ANNX RMSEs: 325.8251953125
+Combination RMSEs: 321.81205164642824
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 360.1629638671875
+ANNX RMSEs: 334.851806640625
+Combination RMSEs: 313.34855066986574
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 371.2486572265625
+ANNX RMSEs: 383.070556640625
+Combination RMSEs: 318.89139734955324
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 385.2763671875
+ANNX RMSEs: 392.32568359375
+Combination RMSEs: 325.905252330022
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 398.686767578125
+ANNX RMSEs: 403.943359375
+Combination RMSEs: 332.6104525253345
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 1
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 10
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 266.53413747254376
+ARIMAX RMSEs: 563.7447358970389
+Random Walk RMSEs: 401.0
+ANN RMSEs: 363.38037109375
+ANNX RMSEs: 319.989501953125
+Combination RMSEs: 314.957254283147
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 1)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 282.9335403442383
+ANNX RMSEs: 280.158017578125
+Combination RMSEs: 275.3748798371291
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 282.5057434082031
+ANNX RMSEs: 283.1788800048828
+Combination RMSEs: 275.1609813691115
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 3)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 281.8320611572266
+ANNX RMSEs: 285.60571350097655
+Combination RMSEs: 274.7272969819045
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 4)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 282.78229431152346
+ANNX RMSEs: 280.4835940551758
+Combination RMSEs: 275.2992568207717
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 5)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 282.2648229980469
+ANNX RMSEs: 280.2118310546875
+Combination RMSEs: 275.0405211640334
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 6)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 280.7221389770508
+ANNX RMSEs: 278.31352447509767
+Combination RMSEs: 274.26917915353533
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 7)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 285.11711486816404
+ANNX RMSEs: 280.88145233154296
+Combination RMSEs: 276.466667099092
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 8)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 282.0031442260742
+ANNX RMSEs: 285.20463104248046
+Combination RMSEs: 274.90968177804706
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 9)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 283.22917419433594
+ANNX RMSEs: 281.6209210205078
+Combination RMSEs: 275.52269676217793
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (1, 10)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 283.86356384277343
+ANNX RMSEs: 280.0185852050781
+Combination RMSEs: 275.8398915863967
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 1)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 284.7674588012695
+ANNX RMSEs: 289.2511801147461
+Combination RMSEs: 276.2918390656447
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 281.6791058349609
+ANNX RMSEs: 285.36943481445314
+Combination RMSEs: 274.29788963327167
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 3)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 283.8674465942383
+ANNX RMSEs: 283.3492770385742
+Combination RMSEs: 275.8418329621291
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 4)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 281.8067150878906
+ANNX RMSEs: 280.13212158203123
+Combination RMSEs: 274.81146720895526
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 5)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 281.4842987060547
+ANNX RMSEs: 289.6892953491211
+Combination RMSEs: 274.0171614838576
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 6)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 280.29651245117185
+ANNX RMSEs: 284.2633544921875
+Combination RMSEs: 273.8344097230611
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 7)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 280.4167926025391
+ANNX RMSEs: 284.72540954589846
+Combination RMSEs: 274.1165059662795
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 8)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 283.58412353515627
+ANNX RMSEs: 278.60982788085937
+Combination RMSEs: 274.37497856149434
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: weekly
+Train Ratio: 0.9
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (2, 9)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+2013-10-20      985.00      1012.0
+2013-10-27      935.00      1015.0
+2013-11-03      952.00      1006.0
+2013-11-10      949.00      1047.0
+2013-11-17      951.00      1052.0
+...                ...         ...
+2023-10-01      930.50      1745.0
+2023-10-08      925.25      1747.5
+2023-10-15      920.00      1750.0
+2023-10-22      917.50      1772.5
+2023-10-29      941.00      1761.0
+
+[524 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 270.2837183705025
+ARIMAX RMSEs: 263.77193501649293
+Random Walk RMSEs: 290.56
+ANN RMSEs: 286.03236328125
+ANNX RMSEs: 284.5934326171875
+Combination RMSEs: 276.03765068063495
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.7
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: standard
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 705.3975135061628
+ARIMAX RMSEs: 722.6081661580299
+Random Walk RMSEs: 649.6
+ANN RMSEs: 673.9192947387695
+ANNX RMSEs: 648.6056471252441
+Combination RMSEs: 677.6395191676015
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.7
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 705.3975135061628
+ARIMAX RMSEs: 722.6081661580299
+Random Walk RMSEs: 649.6
+ANN RMSEs: 662.8157241821289
+ANNX RMSEs: 675.9046075439453
+Combination RMSEs: 675.0493455560169
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.7
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: True
+Scaler: standard
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 705.3975135061628
+ARIMAX RMSEs: 722.6081661580299
+Random Walk RMSEs: 649.6
+ANN RMSEs: 672.2249340820313
+ANNX RMSEs: 691.1403106689453
+Combination RMSEs: 679.4221505792103
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.7
+Number of Forecasts: 50
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: True
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 705.3975135061628
+ARIMAX RMSEs: 722.6081661580299
+Random Walk RMSEs: 649.6
+ANN RMSEs: 651.3901950073242
+ANNX RMSEs: 695.2017639923096
+Combination RMSEs: 668.2392272318943
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.8
+Number of Forecasts: 30
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: standard
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 925.1688568454267
+ARIMAX RMSEs: 955.0830629205416
+Random Walk RMSEs: 907.1666666666666
+ANN RMSEs: 866.1995550791422
+ANNX RMSEs: 936.8831771850586
+Combination RMSEs: 890.2516782039596
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.8
+Number of Forecasts: 30
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 925.1688568454267
+ARIMAX RMSEs: 955.0830629205416
+Random Walk RMSEs: 907.1666666666666
+ANN RMSEs: 885.1147237141927
+ANNX RMSEs: 904.5796473185221
+Combination RMSEs: 900.1733070794297
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.8
+Number of Forecasts: 30
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: True
+Scaler: standard
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 925.1688568454267
+ARIMAX RMSEs: 955.0830629205416
+Random Walk RMSEs: 907.1666666666666
+ANN RMSEs: 884.1961598714192
+ANNX RMSEs: 865.903997039795
+Combination RMSEs: 896.186581348796
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.8
+Number of Forecasts: 30
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: True
+Scaler: robust
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 925.1688568454267
+ARIMAX RMSEs: 955.0830629205416
+Random Walk RMSEs: 907.1666666666666
+ANN RMSEs: 876.1255681355794
+ANNX RMSEs: 939.6982727050781
+Combination RMSEs: 892.614428384522
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.8
+Number of Forecasts: 30
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: False
+Exogenous Differences: False
+Scaler: standard
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 925.1688568454267
+ARIMAX RMSEs: 955.0830629205416
+Random Walk RMSEs: 907.1666666666666
+ANN RMSEs: 2344.7637532552085
+ANNX RMSEs: 2289.376143391927
+Combination RMSEs: 1409.0552590165628
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.8
+Number of Forecasts: 30
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (3, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: linear
+ANN Differences: False
+Exogenous Differences: False
+Scaler: standard
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 925.1688568454267
+ARIMAX RMSEs: 955.0830629205416
+Random Walk RMSEs: 907.1666666666666
+ANN RMSEs: 2488.0289817810058
+ANNX RMSEs: 2455.7501655578612
+Combination RMSEs: 1502.6159413133157
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.8
+Number of Forecasts: 30
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (1, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: sigmoid
+ANN Differences: True
+Exogenous Differences: False
+Scaler: standard
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 963.1384970076322
+ARIMAX RMSEs: 974.9994870050381
+Random Walk RMSEs: 907.1666666666666
+ANN RMSEs: 909.2966684977214
+ANNX RMSEs: 887.5979909261067
+Combination RMSEs: 925.8551478568435
+======= End of Log =======
+
+
+====== Parameters ======
+Data frequency: monthly
+Train Ratio: 0.8
+Number of Forecasts: 30
+Steps Ahead: 1
+Resolution: 50
+ARIMA Specification: (1, 1, 1)
+ANN Specification: (4, 2)
+Epochs: 100
+Activation Function: linear
+ANN Differences: True
+Exogenous Differences: False
+Scaler: standard
+Plot: False
+Plot All: False
+Exogenous Variable:             IRON_CLOSE  COAL_CLOSE
+Date                              
+1999-03-31        1730        2505
+1999-04-30        1730        2505
+1999-05-31        1730        2505
+1999-06-30        1730        2525
+1999-07-31        1730        2378
+...                ...         ...
+2022-11-30        3100       16910
+2022-12-31        3100       21500
+2023-01-31        2759       17200
+2023-02-28        2759       14467
+2023-03-31        2759       13684
+
+[289 rows x 2 columns]
+====== RMSE Results ======
+ARIMA RMSEs: 963.1384970076322
+ARIMAX RMSEs: 974.9994870050381
+Random Walk RMSEs: 907.1666666666666
+ANN RMSEs: 900.5962842305502
+ANNX RMSEs: 883.8113759358724
+Combination RMSEs: 917.7379218986691
+======= End of Log =======
+
+
+monthly,0.8,1,1,50,"(1, 1, 1)","(2, 2)",20,sigmoid,True,True,robust,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",990.5069520860736,923.3278791201924,769.0,821.5504150390625,925.384521484375,906.028683562568
+monthly,0.8,1,1,50,"(1, 1, 1)","(2, 3)",20,sigmoid,True,True,robust,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",990.5069520860736,923.3278791201924,769.0,874.125,874.9127197265625,932.3159760430367
+monthly,0.8,1,1,50,"(1, 1, 1)","(2, 4)",20,sigmoid,True,True,robust,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",990.5069520860736,923.3278791201924,769.0,998.42822265625,986.4501953125,994.4675873711617
+monthly,0.8,1,1,50,"(1, 1, 1)","(2, 5)",20,sigmoid,True,True,robust,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",990.5069520860736,923.3278791201924,769.0,911.2669677734375,917.276611328125,950.8869599297554

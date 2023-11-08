@@ -18,13 +18,13 @@ import os
 warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.simplefilter(action='ignore', category=ValueWarning)
 
-solstorm = "/storage/users/mariumbo/log2.csv"
-local = "log.csv"
+solstorm = "/storage/users/mariumbo/log3.csv"
+local = "log3.csv"
 def log_print(data_dict):
     # Check if the CSV file already exists to decide whether to write headers
-    file_exists = os.path.isfile(solstorm)
+    file_exists = os.path.isfile(local)
 
-    with open(solstorm, "a", newline='') as csvfile:
+    with open(local, "a", newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=data_dict.keys())
         
         if not file_exists:
@@ -55,8 +55,8 @@ def ARIMA_vs_RW_vs_ANN(data,
                        arimax_f=True,
                        annx_f=True,
                        combx_f=True,
-                       log=False,
-                       exog=None):
+                       exog=None,
+                       log=False):
 
 
     def plot_forecast(arima_fitted_df, 
@@ -109,11 +109,17 @@ def ARIMA_vs_RW_vs_ANN(data,
     columns = ['Forecast']
     first_train_size = train_size
     arima_all_forecasts_df = arimax_all_forecasts_df = rw_all_forecasts_df = ann_all_forecasts_df = annx_all_forecasts_df = comb_all_forecasts_df =combx_all_forecasts_df = pd.DataFrame(columns=columns).set_index(pd.DatetimeIndex([], name='Date'))
+    epsilon = 1
+    if log:
+        for i in range(len(data.columns)):
+            data.iloc[:, i] = np.maximum(data.iloc[:, i], 0)
+        for i in range(len(exog.columns)):
+            exog.iloc[:, i] = np.maximum(exog.iloc[:, i], 0)
+        data = data.apply(lambda x: np.log(x+epsilon))
+        exog = exog.apply(lambda x: np.log(x+epsilon))
     
     for _ in range(n_forecasts):
-        if log:
-            data = data.apply(np.log)
-            exog = exog.apply(np.log)
+   
         print("Forecast number " + str(_ + 1))
         train = data["CLOSE"].iloc[:train_size]
         test = data["CLOSE"].iloc[train_size:train_size + steps_ahead]
@@ -263,121 +269,113 @@ def ARIMA_vs_RW_vs_ANN(data,
 #print(df.head())
 
 
-for k in range(1, 4):
-    for l in range(2):
-        for n in range(2):
-            for m in range(2):      
-                for i in range(2, 6):
-                    for j in range(2, 7):
-                        if k == 1:
-                            data_freq = "monthly"
-                            arima_spec = (1, 1, 1)
-                        elif k ==2:
-                            data_freq = "weekly"
-                            arima_spec = (3, 1, 1)
-                        else:
-                            data_freq = "daily"
-                            arima_spec = (3, 1, 3)
-                        exog_inc = True
-                        if data_freq == "daily":
-                            df = load_daily_baci_data()
-                            if exog_inc:
-                                exog = load_daily_exog_data()
-                        elif data_freq == "weekly":
-                            df = load_weekly_baci_data()
-                            if exog_inc:
-                                exog = load_weekly_exog_data()
-                        else:
-                            df = load_monthly_baci_data()
-                            if exog_inc:
-                                exog = load_monthly_exog_spot_data()
-                
-                        if exog_inc:
-                            # Inner join both dataframes on their index to ensure they have the same timestamp
-                            result = df.join(exog, how='inner', lsuffix='_baci', rsuffix='_ironfut')
 
-                            # Split the result back into individual dataframes if needed
-                            df = result[['CLOSE']]
-                            exog = result[['IRON_CLOSE', "COAL_CLOSE"]]
+for i in range(2):
+    for j in range(2):
+        if j == 0:
+            data_freq = "weekly"
+            arima_spec = (3, 1, 1)
+        else:
+            data_freq = "daily"
+            arima_spec = (3, 1, 3)
+        exog_inc = True
+        if data_freq == "daily":
+            df = load_daily_baci_data()
+            if exog_inc:
+                exog = load_daily_exog_data()
+        elif data_freq == "weekly":
+            df = load_weekly_baci_data()
+            if exog_inc:
+                exog = load_weekly_exog_data()
+        else:
+            df = load_monthly_baci_data()
+            if exog_inc:
+                exog = load_monthly_exog_spot_data()
 
-                            # Rename the columns of the individual dataframes to 'CLOSE'
-                            df = df.rename(columns={'CLOSE_baci': 'CLOSE'})
-                            
-                        train_ratio = 0.8
-                        n_forecasts = 30
-                        steps_ahead = 1
-                        res = 200
-                        ann_spec = (i, j)
-                        epochs = 20
-                        if l == 0:
-                            activation = "sigmoid"
-                        else:
-                            activation = "linear"
-                        if n == 0:    
-                            exog_diff = True
-                        else:
-                            exog_diff = False
-                        ann_diff = True
-                        if m == 0:
-                            scaler = "robust"
-                        else:
-                            scaler = "standard"
-                        plot = False
-                        plot_all = False
-                        res = 50
-                        exog = exog
-                        arima_f, arimax_f, ann_f, annx_f, comb_f, combx_f = True, True, True, True, True, True
-                        arima_rmses, rw_rmses, ann_rmses, comb_rmses, arimax_rmses, annx_rmses, combx_rmses = ARIMA_vs_RW_vs_ANN(data=df, 
-                                                                                        res=res, 
-                                                                                        train_ratio=train_ratio,
-                                                                                        n_forecasts=n_forecasts,
-                                                                                        steps_ahead=steps_ahead,
-                                                                                        plot=False,
-                                                                                        plot_all=plot_all,
-                                                                                        arima_spec=arima_spec,
-                                                                                        ann_spec=ann_spec,
-                                                                                        epochs=epochs,
-                                                                                        activation=activation,
-                                                                                        ann_diff=ann_diff,
-                                                                                        exog_diff=exog_diff,
-                                                                                        scaler=scaler,
-                                                                                        exog=exog,
-                                                                                        arima_f=arima_f,
-                                                                                        arimax_f = arimax_f,
-                                                                                        ann_f=ann_f,
-                                                                                        annx_f=annx_f,
-                                                                                        comb_f=comb_f,
-                                                                                        combx_f=combx_f
-                                                                                        )
+        if exog_inc:
+            # Inner join both dataframes on their index to ensure they have the same timestamp
+            result = df.join(exog, how='inner', lsuffix='_baci', rsuffix='_ironfut')
+
+            # Split the result back into individual dataframes if needed
+            df = result[['CLOSE']]
+            exog = result[['IRON_CLOSE', "COAL_CLOSE"]]
+
+            # Rename the columns of the individual dataframes to 'CLOSE'
+            df = df.rename(columns={'CLOSE_baci': 'CLOSE'})
+        
+        
+        train_ratio = 0.8
+        n_forecasts = 30
+        steps_ahead = 1
+        res = 200
+        ann_spec = (4, 2)
+        epochs = 20
+        activation = "sigmoid"
+        exog_diff = False
+        ann_diff = True
+        scaler = "standard"
+        plot = False
+        plot_all = False
+        res = 50
+        exog = exog
+        if i == 1:
+            log = False
+        else:
+            log = True
+        arima_f, arimax_f, ann_f, annx_f, comb_f, combx_f = True, True, True, True, True, True
+        arima_rmses, rw_rmses, ann_rmses, comb_rmses, arimax_rmses, annx_rmses, combx_rmses = ARIMA_vs_RW_vs_ANN(data=df, 
+                                                                        res=res, 
+                                                                        train_ratio=train_ratio,
+                                                                        n_forecasts=n_forecasts,
+                                                                        steps_ahead=steps_ahead,
+                                                                        plot=False,
+                                                                        plot_all=plot_all,
+                                                                        arima_spec=arima_spec,
+                                                                        ann_spec=ann_spec,
+                                                                        epochs=epochs,
+                                                                        activation=activation,
+                                                                        ann_diff=ann_diff,
+                                                                        exog_diff=exog_diff,
+                                                                        scaler=scaler,
+                                                                        exog=exog,
+                                                                        arima_f=arima_f,
+                                                                        arimax_f = arimax_f,
+                                                                        ann_f=ann_f,
+                                                                        annx_f=annx_f,
+                                                                        comb_f=comb_f,
+                                                                        combx_f=combx_f,
+                                                                        log=log
+                                                                        )
 
 
-                        # Prepare the data dictionary with all parameters and results
-                        log_data = {
-                            "Data frequency": data_freq,
-                            "Train Ratio": train_ratio,
-                            "Number of Forecasts": n_forecasts,
-                            "Steps Ahead": steps_ahead,
-                            "Resolution": res,
-                            "ARIMA Specification": str(arima_spec),
-                            "ANN Specification": str(ann_spec),
-                            "Epochs": epochs,
-                            "Activation Function": activation,
-                            "ANN Differences": ann_diff,
-                            "Exogenous Differences": exog_diff,
-                            "Scaler": scaler,
-                            "Plot": plot,
-                            "Plot All": plot_all,
-                            "Exogenous Variable": str(exog.columns.tolist()),  # Assuming exog is a DataFrame
-                            "ARIMA RMSEs": 'N/A' if not arima_rmses else round(np.average(arima_rmses), 2),
-                            "ARIMAX RMSEs": 'N/A' if not arimax_rmses else round(np.average(arimax_rmses), 2),
-                            "Random Walk RMSEs": 'N/A' if not rw_rmses else round(np.average(rw_rmses), 2),
-                            "ANN RMSEs": 'N/A' if not ann_rmses else round(np.average(ann_rmses), 2),
-                            "ANNX RMSEs": 'N/A' if not annx_rmses else round(np.average(annx_rmses), 2),
-                            "Combination RMSEs": 'N/A' if not comb_rmses else round(np.average(comb_rmses), 2),
-                            "CombinationX RMSEs": 'N/A' if not combx_rmses else round(np.average(combx_rmses), 2)
+        # Prepare the data dictionary with all parameters and results
+        log_data = {
+            "Data frequency": data_freq,
+            "Train Ratio": train_ratio,
+            "Number of Forecasts": n_forecasts,
+            "Steps Ahead": steps_ahead,
+            "Resolution": res,
+            "ARIMA Specification": str(arima_spec),
+            "ANN Specification": str(ann_spec),
+            "Epochs": epochs,
+            "Activation Function": activation,
+            "ANN Differences": ann_diff,
+            "Exogenous Differences": exog_diff,
+            "Scaler": scaler,
+            "Log": log, 
+            "Plot": plot,
+            "Plot All": plot_all,
+            "Exogenous Variable": str(exog.columns.tolist()),  # Assuming exog is a DataFrame
+            "ARIMA RMSEs": 'N/A' if not arima_rmses else round(np.average(arima_rmses), 2),
+            "ARIMAX RMSEs": 'N/A' if not arimax_rmses else round(np.average(arimax_rmses), 2),
+            "Random Walk RMSEs": 'N/A' if not rw_rmses else round(np.average(rw_rmses), 2),
+            "ANN RMSEs": 'N/A' if not ann_rmses else round(np.average(ann_rmses), 2),
+            "ANNX RMSEs": 'N/A' if not annx_rmses else round(np.average(annx_rmses), 2),
+            "Combination RMSEs": 'N/A' if not comb_rmses else round(np.average(comb_rmses), 2),
+            "CombinationX RMSEs": 'N/A' if not combx_rmses else round(np.average(combx_rmses), 2)
 
-                        }
+        }
 
-                        # Call log_print to write the data to the CSV file
-                        log_print(log_data)
+        # Call log_print to write the data to the CSV file
+        log_print(log_data)
 
