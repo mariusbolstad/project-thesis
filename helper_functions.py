@@ -47,16 +47,6 @@ def load_weekly_exog_data():
 
 
 def load_monthly_exog_data():
-    df = pd.read_csv("./data/coal_futures_monthly.csv")
-    df2 = pd.read_csv("./data/iron_ore_futures_monthly.csv")
-    df["IRON_CLOSE"] = df2["CLOSE"]
-    df = df.rename(columns={"CLOSE": "COAL_CLOSE"})
-    df.set_index('Date', inplace=True)
-    df.index = pd.to_datetime(df.index)
-    return df
-
-
-def load_monthly_exog_spot_data():
     df = pd.read_csv("./data/coal_spot_monthly.csv")
     df2 = pd.read_csv("./data/iron_ore_spot_monthly.csv")
     df["IRON_CLOSE"] = df2["CLOSE"]
