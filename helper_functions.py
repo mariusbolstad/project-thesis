@@ -56,3 +56,8 @@ def load_monthly_exog_data():
     return df
 
 
+def log_data(data):
+    # Ensure all values are at least 1 to avoid issues with log transformation
+    data = data.applymap(lambda x: max(x, 1))
+    data = data.apply(lambda x: np.log(x))
+    return data

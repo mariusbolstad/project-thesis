@@ -25,6 +25,7 @@ def ARIMA_forecast(train: pd.DataFrame,
                    p: int=3, 
                    i: int=1, 
                    q: int=3,
+                   seasonal_order=None,
                    plot: bool=False,
                    exog: pd.DataFrame=None):
 
@@ -33,7 +34,7 @@ def ARIMA_forecast(train: pd.DataFrame,
     if exog is not None:
         exog_train = exog.loc[train.index]
     
-    arima_model = ARIMA(train.dropna(), order=(p, i, q), exog=exog_train)
+    arima_model = ARIMA(train.dropna(), order=(p, i, q), exog=exog_train, seasonal_order=seasonal_order)
     model = arima_model.fit()
     print(model.summary())
     
@@ -105,7 +106,6 @@ def ARIMA_forecasts(data: pd.DataFrame,
                    p: int=3, 
                    i: int=1, 
                    q: int=3,
-                   n_forecasts: int=1,
                    plot: bool=True):
     
     def plot_forecast():
@@ -241,7 +241,7 @@ def find_arima_spec(df):
     df["CLOSE"].plot(figsize=(12,5))
     stationarity_tests(df)
     plt.show()
-    stepwise_fit = auto_arima(df["CLOSE"].dropna(), trace=True, suppress_warnings=True, n_fits=50)
+    stepwise_fit = auto_arima(df["CLOSE"].dropna(), trace=True, suppress_warnings=True, seasonal=True, n_fits=10)
     return stepwise_fit.summary()
     
     

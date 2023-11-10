@@ -3012,3 +3012,206 @@ monthly,0.8,1,1,50,"(1, 1, 1)","(2, 2)",20,sigmoid,True,True,robust,False,False,
 monthly,0.8,1,1,50,"(1, 1, 1)","(2, 3)",20,sigmoid,True,True,robust,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",990.5069520860736,923.3278791201924,769.0,874.125,874.9127197265625,932.3159760430367
 monthly,0.8,1,1,50,"(1, 1, 1)","(2, 4)",20,sigmoid,True,True,robust,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",990.5069520860736,923.3278791201924,769.0,998.42822265625,986.4501953125,994.4675873711617
 monthly,0.8,1,1,50,"(1, 1, 1)","(2, 5)",20,sigmoid,True,True,robust,False,False,"['IRON_CLOSE', 'COAL_CLOSE']",990.5069520860736,923.3278791201924,769.0,911.2669677734375,917.276611328125,950.8869599297554
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 1 forecasts
+ARIMA RMSEs: 0.44656547081045694
+ARIMAX RMSEs: N/A
+Random Walk RMSEs: 0.437540900197499
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 50 forecasts
+ARIMA RMSEs: 0.8434926393052558
+ARIMAX RMSEs: 0.845661168963193
+Random Walk RMSEs: 0.7823655996039998
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.5. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.39002614150806664
+ARIMAX RMSEs: 0.390947935231414
+Random Walk RMSEs: 0.3771048423940265
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.5. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.3940335963543363
+ARIMAX RMSEs: 0.3937949921477975
+Random Walk RMSEs: 0.3771048423940265
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.5. 1 step ahead. 50 forecasts
+ARIMA RMSEs: 0.3420652557310597
+ARIMAX RMSEs: 0.3296220079214993
+Random Walk RMSEs: 0.2901754944773182
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 50 forecasts
+ARIMA RMSEs: 0.8434926393052558
+ARIMAX RMSEs: 0.845661168963193
+Random Walk RMSEs: 0.7823655996039998
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 50 forecasts
+ARIMA RMSEs: 0.8434926393052558
+ARIMAX RMSEs: 0.845661168963193
+Random Walk RMSEs: 0.7823655996039998
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 50 forecasts
+ARIMA RMSEs: 0.776458533431022
+ARIMAX RMSEs: 0.7825730492761147
+Random Walk RMSEs: 0.7823655996039998
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 50 forecasts
+ARIMA RMSEs: 0.9169098522969505
+ARIMAX RMSEs: 0.9045130621071071
+Random Walk RMSEs: 0.7823655996039998
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 1 forecasts
+ARIMA RMSEs: 0.2871396513190696
+ARIMAX RMSEs: 0.2883049932624413
+Random Walk RMSEs: 0.3554094850410685
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 1 forecasts
+ARIMA RMSEs: 0.26490675737742286
+ARIMAX RMSEs: 0.24723133295454858
+Random Walk RMSEs: 0.3554094850410685
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.216031451873946
+ARIMAX RMSEs: 0.2258280468688965
+Random Walk RMSEs: 0.22060906014128354
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.2108671507480477
+ARIMAX RMSEs: 0.21615742336356028
+Random Walk RMSEs: 0.22060906014128354
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.23088410733067377
+ARIMAX RMSEs: 0.2336228139223458
+Random Walk RMSEs: 0.22060906014128354
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.21531994379594185
+ARIMAX RMSEs: 0.22100872550806194
+Random Walk RMSEs: 0.22060906014128354
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.5. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.42598669714664344
+ARIMAX RMSEs: 0.42594951913188234
+Random Walk RMSEs: 0.39336830600080114
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.2108671507480477
+ARIMAX RMSEs: 0.21615742336356028
+Random Walk RMSEs: 0.22060906014128354
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.06444867579320791
+ARIMAX RMSEs: 0.06578750617204916
+Random Walk RMSEs: 0.07281046218099284
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.06538846297704522
+ARIMAX RMSEs: 0.0663260419579501
+Random Walk RMSEs: 0.07281046218099284
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 0.06444867579320791
+ARIMAX RMSEs: 0.06578750617204916
+Random Walk RMSEs: 0.07281046218099284
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 141.29712749152517
+ARIMAX RMSEs: 141.6586154717587
+Random Walk RMSEs: 188.83
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 100 forecasts
+ARIMA RMSEs: 395.592223122781
+ARIMAX RMSEs: 390.2276741066438
+Random Walk RMSEs: 387.74
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 20 forecasts
+ARIMA RMSEs: 160.3321204267365
+ARIMAX RMSEs: 160.29744088588885
+Random Walk RMSEs: 250.0
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 20 forecasts
+ARIMA RMSEs: 154.8257272210597
+ARIMAX RMSEs: 160.29744088588885
+Random Walk RMSEs: 250.0
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 20 forecasts
+ARIMA RMSEs: 154.8257272210597
+ARIMAX RMSEs: 160.29744088588885
+Random Walk RMSEs: 250.0
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 20 forecasts
+ARIMA RMSEs: 154.69193931752903
+ARIMAX RMSEs: 158.8301159341751
+Random Walk RMSEs: 250.0
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 1 forecasts
+ARIMA RMSEs: 57.842976354191705
+ARIMAX RMSEs: 97.55853041699083
+Random Walk RMSEs: 129.0
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 1 forecasts
+ARIMA RMSEs: 998.0118959940028
+ARIMAX RMSEs: 1064.771899302903
+Random Walk RMSEs: 1856.0
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
+Monthly Forecast: Train ratio: 0.8. 1 step ahead. 1 forecasts
+ARIMA RMSEs: 990.5172645137834
+ARIMAX RMSEs: 923.327898777542
+Random Walk RMSEs: 769.0
+ANN RMSEs: N/A
+ANNX RMSEs: N/A
+Combination RMSEs: N/A
